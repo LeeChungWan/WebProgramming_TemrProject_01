@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TP1 in HTML5 Skeleton</title>
+<!-- CSS, JS External 정의 -->
+<link rel="stylesheet" href="./css/export.css" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="./css/TP1_CSS_SKELETON.css">
+</script>
+
+</script>
+
+</head>
+<body onload="start_showSlides(1)">
+	<!-- 레이아웃은 HTML5 엘리먼트를 사용할 것 -->
+	<header>
+		<!-- Header (Menu bar) -->
+		<div id="menu_div" class="Bar">
+			<a href="#"><button class="Menu">HOME</button></a>
+			<a href="#top_Imageslide"><button class="Menu">IMAGE SLIDE</button></a>
+			<a href="#top_Introduce"><button class="Menu">INTRODUCE</button></a>
+			<a href="#top_Gallery"><button class="Menu">GALLERY</button></a>
+			<a href="#top_Guestbook"><button class="Menu">GUEST BOOK</button></a>
+			<div class="dropdown">
+            <button id="menu_button" onclick="dropdown()" class="dropbtn">MENU</button>
+           <div id="myDropdown" class="dropdown-content">
+               <a class="select" href="#">HOME</a>
+               <a class="select" href="#top_Imageslide">IMAGE SLIDE</a>
+               <a class="select" href="#top_Introduce">INTRODUCE</a>
+               <a class="select" href="#top_Gallery">GALLERY</a>
+               <a class="select" href="#top_Guestbook">GUEST BOOK</a>
+           </div>
+         </div>
+		</div>
+	</header>
+
+	<main>
+		<div class = "ImageSlide" id="top_Imageslide">
+			<div class="slidediv">
+				<img class="imgSlides" src="img\chelsea\첼시로고.jpg">
+			</div>
+			<div class="slidediv">
+				<img class="imgSlides" src="img\chelsea\간지나는사진.jpg">
+			</div>
+			<div class="slidediv">
+				<img class="imgSlides" src="img\chelsea\단체_1.jpg">
+			</div>
+			<div class="slidediv">
+				<img class="imgSlides" src="img\chelsea\아련한눈빛아자르.jpg">
+			</div>
+			<div class="slidediv">
+				<img class="imgSlides" src="img\chelsea\콘테.jpg">
+			</div>
+
+		  <a class="slide_prev" onclick="imgPlusSlides(-1)">&#10094;</a>
+		  <a class="slide_next" onclick="imgPlusSlides(1)">&#10095;</a>
+
+			<div class="div_dot">
+				<span class="dot" onclick="imgCurrentSlide(1)"></span>
+				<span class="dot" onclick="imgCurrentSlide(2)"></span>
+				<span class="dot" onclick="imgCurrentSlide(3)"></span>
+				<span class="dot" onclick="imgCurrentSlide(4)"></span>
+				<span class="dot" onclick="imgCurrentSlide(5)"></span>
+			</div>
+		</div>
+
+
+
+		<div class="카테고리" id="top_Introduce">
+			T E A M   &nbsp;   I N T R O D U C E
+		</div>
+		<div class = "Introduce">
+			<div class="containerIntroduce">
+				<p>Club characteristics</p>
+				<div id="chartdiv"></div>
+				<div class="tableIntroduce">
+				<table>
+				  <thead>
+				    <tr>
+							<th colspan="2"><img src="img\chelsea\첼시정식 로고.png" width="300px" height="200px"></th>
+						</tr>
+						<tr>
+							<th class="left_td" colspan="2" style="color:white;background-color:#0000C9">챌시 FC</th>
+						</tr>
+						<tr>
+							<th colspan="2" style="color:#0000C9">Chelsea F.C.</th>
+						</tr>
+				  </thead>
+
+					<tbody>
+				    <tr>
+				      <td class="left_td">정식 명칭</td>
+				      <td>Chelsea Football Club</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">별칭</td>
+				      <td><strong id="블루스">블루스(The Blues)</strong>, 팬셔너즈(The Pensioners)</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">창단</td>
+				      <td>1905년 3월 10일</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">소속 리그</td>
+				      <td><a href="https://namu.wiki/w/%EC%9E%89%EA%B8%80%EB%A6%AC%EC%8B%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%96%B4%20%EB%A6%AC%EA%B7%B8">잉글리시 프리미어 리그</a>(English Premier League)</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">연고지</td>
+				      <td>런던(London), 풀럼(Fulham)</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">홈 구장</td>
+				      <td ><a href="https://namu.wiki/w/%EC%8A%A4%ED%83%AC%ED%8D%BC%EB%93%9C%20%EB%B8%8C%EB%A6%AC%EC%A7%80">스탬퍼드 브리지</a>(Stamford Bridge)<br>(41,631명 수용 가능)</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">라이벌</td>
+				      <td><strong><a id="아스날" href="https://namu.wiki/w/%EC%95%84%EC%8A%A4%EB%82%A0%20FC"><span id="아스날">아스날 FC</span></a> - 런던 더비</strong> <br>
+									토트넘 핫스퍼 FC, 리즈 유나이트드 AFC <br>
+									풀럼 FC, QPR, 브렌트포드 FC
+							</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">구단주</td>
+				      <td><a href="https://namu.wiki/w/%EB%A1%9C%EB%A7%8C%20%EC%95%84%EB%B8%8C%EB%9D%BC%EB%AA%A8%EB%B9%84%EC%B9%98">로만 아브라모비치(Roman Abramovich)</a></td>
+				    </tr>
+						<tr>
+				      <td class="left_td">회장</td>
+				      <td>브루스 벅(Bruce Buck)</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">감독</td>
+				      <td><a href="https://namu.wiki/w/%EC%95%88%ED%86%A0%EB%8B%88%EC%98%A4%20%EC%BD%98%ED%85%8C"><strong>안토니오 콘테</a>(Antonio Conte)</strong></td>
+				    </tr>
+						<tr>
+				      <td class="left_td">주장</td>
+				      <td><a href="https://namu.wiki/w/%EC%A1%B4%20%ED%85%8C%EB%A6%AC">존 테리</a>(John Terry)</td>
+				    </tr>
+						<tr>
+				      <td class="left_td">부주장</td>
+				      <td><a href="https://namu.wiki/w/%EA%B2%8C%EB%A6%AC%20%EC%BC%80%EC%9D%B4%ED%9E%90">게리 케이힐</a>(Gary Cahill)</td>
+				    </tr>
+				  </tbody>
+
+				  <tfoot>
+				    <tr>
+				      <td colspan="2">Kit Sponsor : adidas    Main Sponsor : YOKOHAMA TYERS </td>
+				    </tr>
+				  </tfoot>
+				</table>
+			</div>
+			</div>
+		</div>
+
+		<div class="카테고리" id="top_Gallery">
+			P L A Y E R
+		</div>
+
+		<div class = "Gallery" >
+			<span class="removecontainer-00">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-00')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\에덴 아자르_인물.png" >
+					<div class="middle">
+						<div class="text">첼시 FC No. 10 <br>에덴 아자르</div>
+					</div>
+				</div>
+			</span>
+			<span class="removecontainer-01">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-01')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\디에고 코스타_인물.png">
+					<div class="middle">
+						<div class="text">첼시 FC No. 19<br>디에고 코스타</div>
+					</div>
+				</div>
+			</span>
+			<span class="removecontainer-02">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-02')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\은골로 캉테_인물.png">
+					<div class="middle">
+						<div class="text">첼시 FC No. 7<br>능고로 캉테</div>
+					</div>
+				</div>
+			</span>
+			<span class="removecontainer-03">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-03')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\세스크 파브레가스_인물.png">
+					<div class="middle">
+						<div class="text">첼시 FC No. 4<br>세스크 파브레가스</div>
+					</div>
+				</div>
+			</span>
+			<span class="removecontainer-04">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-04')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\다비드 루이스_인물.png">
+					<div class="middle">
+						<div class="text">첼시 FC No. 30<br>다비드 루이즈</div>
+					</div>
+				</div>
+			</span>
+			<span class="removecontainer-05">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-05')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\존 테리_인물.png">
+					<div class="middle">
+						<div class="text">첼시 FC No. 26<br>존 테리</div>
+					</div>
+				</div>
+			</span>
+			<span class="removecontainer-06">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-06')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\쿠르투아_인물.png">
+					<div class="middle">
+						<div class="text">첼시 FC No. 13<br>쿠르투아</div>
+					</div>
+				</div>
+			</span>
+			<span class="removecontainer-07">
+				<div class="img_Gallery">
+					<button class="btn" onclick="remove_모달('removecontainer-07')">x</button>
+					<img class="picture" onclick="openModal(this)" src="img\chelsea\네마냐 마티치_인물.png">
+					<div class="middle">
+						<div class="text">첼시 FC No. 21<br>네마냐 마티치</div>
+					</div>
+				</div>
+			</span>
+
+			<button type="button" id="resetBtn" onclick="localStorageReset()">Reset</button>
+
+			<div id="myModal">
+			  <div class="modal-content" onclick="closeModal()">
+
+					<span class="removecontainer-00">
+						<div class="modalSlides">
+							<img src="img\chelsea\에덴 아자르_인물.png" style="width:100%">
+						</div>
+					</span>
+
+					<span class="removecontainer-01">
+						<div class="modalSlides">
+							<img src="img\chelsea\디에고 코스타_인물.png" style="width:100%">
+						</div>
+					</span>
+
+					<span class="removecontainer-02">
+						<div class="modalSlides">
+							<img src="img\chelsea\은골로 캉테_인물.png" style="width:100%">
+						</div>
+					</span>
+
+					<span class="removecontainer-03">
+						<div class="modalSlides">
+							<img src="img\chelsea\세스크 파브레가스_인물.png" style="width:100%">
+						</div>
+					</span>
+
+					<span class="removecontainer-04">
+						<div class="modalSlides">
+							<img src="img\chelsea\다비드 루이스_인물.png" style="width:100%">
+						</div>
+					</span>
+
+					<span class="removecontainer-05">
+						<div class="modalSlides">
+							<img src="img\chelsea\존 테리_인물.png" style="width:100%">
+						</div>
+					</span>
+
+					<span class="removecontainer-06">
+						<div class="modalSlides">
+							<img src="img\chelsea\쿠르투아_인물.png" style="width:100%">
+						</div>
+					</span>
+
+					<span class="removecontainer-07">
+						<div class="modalSlides">
+							<img src="img\chelsea\네마냐 마티치_인물.png" style="width:100%">
+						</div>
+					</span>
+
+			  </div>
+				<a class="modalprev" onclick="modalPlusSlides(-1)">&#10094;</a>
+				<a class="modalnext" onclick="modalPlusSlides(1)">&#10095;</a>
+			</div>
+		</div>
+
+		<div class="카테고리">
+			G U E S T B O O K
+		</div>
+		<div class = "Guestbook" id="top_Guestbook">
+			<span id="showBookArray"></span>
+			<table id="guestBookSubmit">
+				<tr id="writer-tr">
+					<td id="guest-left-td">
+						The Blues
+					</td>
+					<td>
+						<input type="text" id="작성자" name="작성자">
+					</td>
+				</tr>
+				<tr>
+					<td id="guest-left-td">
+						Comment
+					</td>
+					<td>
+						<textarea id="내용" name="내용" rows="3"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="button" onclick="clickSubmit()">등록하기</button></td>
+				</tr>
+			</table>
+		</div>
+
+	</main>
+
+	<footer>
+		<p>post by <strong>Chungnam Univ</strong>, <strong>201302467</strong>, Chungwan Lee, chungwan.lee.cse@gmail.com</p>
+	</footer>
+
+	<script type="text/javascript" src="./js/amcharts.js"></script>
+	<script type="text/javascript" src="./js/radar.js"></script>
+	<script type="text/javascript" src="./js/export.min.js"></script>
+	<script type="text/javascript" src="./js/light.js"></script>
+	<script type="text/javascript" src="./js/fabric.min.js"></script>
+	<script type="text/javascript" src="./js/FileSaver.min.js"></script>
+	<script type="text/javascript" src="./js/jszip.min.js"></script>
+	<script type="text/javascript" src="./js/pdfmake.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/javascript.js"></script>
+</body>
+
+</html>
